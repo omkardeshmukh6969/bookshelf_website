@@ -1,4 +1,9 @@
+import os
+
 class Config:
+    # Secret key for session management and other uses
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'a_very_secret_key'
+
     # MySQL configurations
     MYSQL_HOST = 'localhost'
     MYSQL_USER = 'root'  # Replace with your MySQL username
